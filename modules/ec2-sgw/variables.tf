@@ -14,6 +14,12 @@ variable "subnet_id" {
   description = "VPC Subnet ID to launch in the EC2 Instance"
 }
 
+variable "ami_id" {
+  type        = string
+  description = "The AMI ID to use for the Storage Gateway EC2 image"
+  default = null
+}
+
 variable "vpc_id" {
   type        = string
   description = "The VPC ID in which the Storage Gateway security group will be created in"

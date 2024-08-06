@@ -46,6 +46,10 @@ data "aws_ami" "sgw_ami" {
     name   = "name"
     values = ["aws-storage-gateway-FILE_S3*"]
   }
+  filter {
+    name   = "image-id"
+    values = [var.ami_id]
+  }
 }
 
 resource "aws_eip" "ip" {
